@@ -1,0 +1,163 @@
+2017-12-12 11:10:43 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' in /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php:660
+Stack trace:
+#0 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(660): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#3 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(243): yii\db\Connection->getSlavePdo()
+#5 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(1062): yii\db\Command->prepare(true)
+#6 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/mysql/Schema.php(111): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Schema.php(662): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Schema.php(173): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/MigrateController.php(204): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Controller.php(135): yii\base\Controller->runAction('', Array)
+#18 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /home/michal/webapp/advapp/edusystem/yii(27): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' in /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php:597
+Stack trace:
+#0 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#1 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(243): yii\db\Connection->getSlavePdo()
+#3 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(1062): yii\db\Command->prepare(true)
+#4 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/mysql/Schema.php(111): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Schema.php(662): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/db/Schema.php(173): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/MigrateController.php(204): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Controller.php(135): yii\base\Controller->runAction('', Array)
+#16 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /home/michal/webapp/advapp/edusystem/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /home/michal/webapp/advapp/edusystem/yii(27): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2017-12-12 11:10:43 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'LESS_TERMCAP_mb' => '[01;31m'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/michal'
+    'LESS_TERMCAP_md' => '[01;38;5;180m'
+    'SESSION' => 'ubuntu'
+    'LESS_TERMCAP_me' => '[0m'
+    'GPG_AGENT_INFO' => '/home/michal/.gnupg/S.gpg-agent:0:1'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '4205'
+    'TERM' => 'screen'
+    'DERBY_HOME' => '/usr/lib/jvm/java-8-oracle/db'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'BYOBU_CONFIG_DIR' => '/home/michal/.byobu'
+    'WINDOWID' => '35651594'
+    'GNOME_KEYRING_CONTROL' => ''
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/2962'
+    'LESS_TERMCAP_ue' => '[0m'
+    'BYOBU_TTY' => '/dev/pts/17'
+    'GTK_MODULES' => 'gail:atk-bridge:unity-gtk-module'
+    'BYOBU_READLINK' => 'readlink'
+    'USER' => 'michal'
+    'LS_COLORS' => 'rs=0:di=38;5;5:ln=4;5;37:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=3;28:ow=34;42:st=37;44:ex=38;5;202:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'QT_ACCESSIBILITY' => '1'
+    'GREP_COLORS' => 'ms=01;38;5;202:mc=01;31:sl=:cx=:fn=01;38;5;132:ln=32:bn=32:se=00;38;5;242'
+    'BYOBU_RUN_DIR' => '/dev/shm/byobu-michal-nsb8qQMK'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'BYOBU_DISTRO' => 'Ubuntu'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/home/michal/.byobu/.ssh-agent'
+    'BYOBU_DATE' => '%Y-%m-%d '
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'LIBVIRT_DEFAULT_URI' => 'qemu:///system'
+    'TMUX' => '/tmp/tmux-1000/default,4550,1'
+    'LESS_TERMCAP_us' => '[04;38;5;139m'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'BYOBU_BACKEND' => 'tmux'
+    'BYOBU_SED' => 'sed'
+    'PATH' => '/home/michal/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/michal/.vimpkg/bin:/home/michal/.rvm/bin'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'QT_IM_MODULE' => 'ibus'
+    'BYOBU_DARK' => '#333333'
+    'JOB' => 'unity-settings-daemon'
+    'PWD' => '/home/michal/webapp/advapp/edusystem'
+    'XDG_SESSION_TYPE' => 'x11'
+    'BYOBU_ULIMIT' => 'ulimit'
+    'JAVA_HOME' => '/usr/lib/jvm/java-8-oracle'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'pl_PL.UTF-8'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'GDM_LANG' => 'pl_PL'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'IM_CONFIG_PHASE' => '1'
+    'TMUX_PANE' => '%8'
+    'BYOBU_WINDOW_NAME' => '-'
+    'BYOBU_PYTHON' => 'python3'
+    'BYOBU_CHARMAP' => 'UTF-8'
+    'GDMSESSION' => 'ubuntu'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'SESSIONTYPE' => 'gnome-session'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/michal'
+    'SHLVL' => '2'
+    'LANGUAGE' => 'pl_PL'
+    'BYOBU_LIGHT' => '#EEEEEE'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'LOGNAME' => 'michal'
+    'UPSTART_EVENTS' => 'xsession started'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'COMPIZ_BIN_PATH' => '/usr/bin/'
+    'LESS_TERMCAP_so' => '[03;38;5;202m'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop'
+    'BYOBU_PAGER' => 'sensible-pager'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-Lx7LTZzXm2'
+    'J2SDKDIR' => '/usr/lib/jvm/java-8-oracle'
+    'BYOBU_ACCENT' => '#75507B'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'BYOBU_PREFIX' => '/usr'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'unity7'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'J2REDIR' => '/usr/lib/jvm/java-8-oracle/jre'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'BYOBU_HIGHLIGHT' => '#DD4814'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'LESS_TERMCAP_se' => '[0m'
+    'BYOBU_TIME' => '%H:%M:%S'
+    'XAUTHORITY' => '/home/michal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1513077043.8449
+    'REQUEST_TIME' => 1513077043
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
